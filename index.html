@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+     <!--Heading-->
+     <h1>Mobile.com </h1>
+     <!--heading end-->
+     <!--Nav-->
+     <div class="row1-nav">
+        <div class="row-col">Link</div>
+        <div class="row-col">Link</div>
+        <div class="row-col">Link</div>
+     </div>
+     <!--nav end-->
+     <!--scroll images-->
+     <div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="img/OIP.jpg" width="100%" height="200px" >
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="img/R.jpg" width="100%" height="200px">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="img/R.jpg" width="100%" height="200px">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>            
+
+     </div>
+     <!--scroll end-->
+     <!--offers-->
+     <div class="offer-row">
+        <div class="offer-col">
+            <img src="img/imd1.webp" height="150px" width="20%"><br/><br/>
+            <p>Poco-M3</p>
+            <button type="submit">BUY NOW</button>
+        </div>
+        <div class="offer-col">
+            <img src="img/w.webp" height="150px" width="20%"><br/><br/>
+            <p>Poco-M3</p>
+            <button type="submit">BUY NOW</button>
+        </div>
+        <div class="offer-col">
+            <img src="img/f.webp" height="150px" width="20%"><br/><br/>
+            <p>Poco-M3</p>
+            <button type="submit">BUY NOW</button>
+        </div>
+     </div>
+     <div class="row3">
+        <div class="row3-col">
+            <img src="img/f.webp" height="150px" width="20%"><br/><br/>
+            <p>Poco-M3</p>
+            <button type="submit">BUY NOW</button>
+        </div>
+        <div class="row3-col">
+            <img src="img/f.webp" height="150px" width="20%"><br/><br/>
+            <p>Poco-M3</p>
+            <button type="submit">BUY NOW</button>
+        </div>
+        <div class="row3-col">
+            <img src="img/f.webp" height="150px" width="20%"><br/><br/>
+            <p>Poco-M3</p>
+            <button type="submit">BUY NOW</button>
+        </div>
+        
+     </div>
+     <div class="row3">
+        <div class="row3-col"></div>
+        <div class="row3-col"></div>
+        <div class="row3-col"></div>
+
+     </div>
+     <div class="row3">
+        <div class="row3-col"></div>
+        <div class="row3-col"></div>
+        <div class="row3-col"></div>
+
+     </div>
+     
+
+</body>
+</html>
